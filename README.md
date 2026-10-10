@@ -11,5 +11,5 @@ contact (contact.html) contact info and professional links
 Published Website
 View My Portfolio
 
-Author
+Author:
 Bailey Wheatman
