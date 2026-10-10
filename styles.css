@@ -1,4 +1,220 @@
 /* CSS by Bailey Wheatman */
 /* color palette - haven't picked one out yet */
+/*
+page background color: #f7f5ef 
+header background: #E5E9DF
+Nav: #303b32
+h2 and h3: #405743
+nav hover: #c7d5bf
+header text: #566357
+card background & section background: #ffffff
+card border: #e4e5dc
+*/
 
 /*Global (base) MOBILE FIRST STYLES*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f7f5ef;
+    color: #303b32;
+    line-height: 1.7;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "footer";
+}
+
+header {
+    grid-area: header;
+    background-color: #E5E9DF;
+    text-align: center;
+    padding: 40px 20px 30px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0 0 15px;
+    padding: 20px;
+    line-height: 1.2;
+}
+
+header p {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 0 20px 20px;
+    font-size: 1.05rem;
+    color: #566357;
+}
+
+nav {
+    grid-area: nav;
+    background-color: #303b32;
+    padding: 15px 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px 40px;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #f7f5ef;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #c7d5bf;
+}
+
+/* Main content styles */
+main {
+    grid-area: main;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px 24px;
+}
+
+section {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    border: 1px solid #e4e5dc;
+}
+
+section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #405743;
+    margin-top: 0;
+}
+
+section h3 {
+    font-size: 1.4rem;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    color: #405743;
+}
+
+section p {
+    margin: 0 0 10px;
+    font-size: 1rem;
+    color: #303b32;
+}
+
+/* Footer styles */
+footer {
+    background-color: #303b32;
+    color: #f7f5ef;
+    text-align: center;
+    padding: 25px 20px;
+    letter-spacing: 0.5px;
+    grid-area: footer;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+@media (min-width: 768px) {
+    main {
+        padding: 50px 40px;
+    }
+
+    section {
+        padding: 40px;
+    }
+
+    .project-main{
+        gap: 35px;
+    }
+
+    .project-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    }
+
+    .project-gallery.single-image {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 500px) {
+    header{
+        padding: 55px 20px 45px;
+    }
+
+    nav ul {
+        gap: 15px 22px;
+    }
+    main {
+        padding: 30px 16px;
+    }
+
+    section {
+        padding: 50px;
+    }
+
+    .project-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
+}
+
+/* PROJECT PAGE*/
+.project-main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.projects-main .project-card {
+    margin-bottom: 0;
+}
+
+.project-category {
+    color: #566357;
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.project-gallery img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #e4e5dc;
+    border-radius: 10px;
+}
+
+.project-gallery.single-image {
+    max-width: 600px;
+}
+
+.skills{
+    padding-top: 15px;
+    border-top: 1px solid #e4e5dc;
+    color: #303732;
+    font-size: 0.95rem;
+}
